@@ -3,6 +3,7 @@ package com.oceanbrasil.ocean_android_introducao_13_e_15_03_2023
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -18,10 +19,12 @@ class MainActivity : AppCompatActivity() {
 
         val tvResultado: TextView = findViewById(R.id.tvResultado)
 
+        val etNome: EditText = findViewById(R.id.etNome)
+
         // Adicionamos um listener ao btEnviar
         // Sempre um toque ocorrer no botão, o conteúdo dentro das { } será executado
         btEnviar.setOnClickListener {
-            tvResultado.text = "Samsung Ocean!"
+            tvResultado.text = etNome.text
         }
     }
 }
