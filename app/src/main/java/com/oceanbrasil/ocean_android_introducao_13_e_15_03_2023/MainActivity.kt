@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             if (etNome.text.isBlank()) {
                 // Se for true, executa o if
                 // Exibir uma mensagem de erro
-                etNome.error = "Digite um nome válido!"
+                etNome.error = getString(R.string.insert_a_valid_name)
             } else {
                 // Se for false, execute o else
                 // Atualizo o TextView normalmente
