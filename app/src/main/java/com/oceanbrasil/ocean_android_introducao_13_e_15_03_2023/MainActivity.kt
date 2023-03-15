@@ -46,6 +46,10 @@ class MainActivity : AppCompatActivity() {
             // Criamos a intent (intenção) de abrir uma nova tela a partir da tela atual
             val novaTelaIntent = Intent(this, ResultadoActivity::class.java)
 
+            // Podemos colocar dados extras na Intent
+            val nomeDigitado: String = etNome.text.toString()
+            novaTelaIntent.putExtra("NOME_DIGITADO", nomeDigitado)
+
             // Registramos a intent no Android
             // Como essa Intent abre uma Activity, usamos a declaração `startActivity`
             startActivity(novaTelaIntent)
